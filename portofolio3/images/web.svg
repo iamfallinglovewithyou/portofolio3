@@ -1,27 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <g id="background-elements">
-    <path d="M380.56,408.9c-15.55-10.87-19.08-31-18.46-49.16..." style="fill:#f8fafc"></path>
-    <rect x="170.52" y="58.92" width="15.03" height="53.64" style="fill:#6366f1"></rect>
+  <rect width="500" height="500" fill="#f8fafc"/>
+  
+  <circle cx="450" cy="50" r="80" fill="#6366f1" opacity="0.1"/>
+  <circle cx="50" cy="450" r="60" fill="#4f46e5" opacity="0.1"/>
+
+  <rect x="50" y="400" width="400" height="20" rx="10" fill="#0f172a"/>
+  
+  <g id="character">
+    <path d="M150 400 Q150 300 250 300 T350 400" fill="#0f172a"/>
+    <circle cx="250" cy="250" r="40" fill="#ffbe9d"/>
+    <path d="M210 250 Q210 200 250 200 T290 250" fill="#263238"/>
+    <rect x="200" y="340" width="100" height="60" rx="5" fill="#474af0"/>
+    <rect x="210" y="350" width="80" height="40" fill="#ffffff" opacity="0.2"/>
   </g>
 
-  <g id="character-ahmad">
-    <path d="M329.72,297.41h0A62.61,62.61,0,0,1,392.33,360v72.6H267.11V360A62.61,62.61,0,0,1,329.72,297.41Z" style="fill:#0f172a"></path>
-    <path d="M171.18,397.4l-6.3,4.46-7,16.81..." style="fill:#ffbe9d"></path>
-    <path d="M271.21,403.43l1.69,4.22-3.33,38.49h84.95l-3.79-11.51..." style="fill:#4f46e5"></path>
+  <g id="monitor-laravel">
+    <rect x="320" y="150" width="140" height="100" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="3"/>
+    <text x="345" y="205" font-family="Montserrat, sans-serif" font-size="16" fill="#6366f1" font-weight="bold">LARAVEL</text>
+    <rect x="335" y="215" width="110" height="4" rx="2" fill="#6366f1" opacity="0.5"/>
+    <rect x="335" y="225" width="70" height="4" rx="2" fill="#6366f1" opacity="0.3"/>
   </g>
 
-  <g id="screens-tech">
-    <rect x="285.9" y="142.86" width="82.74" height="58.98" style="fill:#0f172a"></rect>
-    <path d="M313.81,170.24V182..." style="fill:#ffffff"></path> <rect x="260.34" y="81.31" width="59.25" height="42.24" style="fill:#6366f1"></rect>
-    <path d="M282.26,104.42..." style="fill:#ffffff"></path> </g>
+  <g id="monitor-figma">
+    <rect x="60" y="180" width="100" height="70" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="95" cy="215" r="15" fill="#6366f1" opacity="0.8"/>
+    <text x="115" y="220" font-family="Montserrat, sans-serif" font-size="10" fill="#0f172a" font-weight="bold">FIGMA</text>
+  </g>
 
-  <g id="identity-labels">
-    <rect x="390.92" y="377.2" width="86.8" height="21.78" style="fill:#6366f1"></rect>
-    <text x="395" y="392" font-family="Montserrat" font-size="8" fill="white" font-weight="bold">STMIK WICIDA</text>
+  <g id="labels">
+    <rect x="340" y="430" width="110" height="25" rx="12" fill="#6366f1"/>
+    <text x="352" y="447" font-family="Montserrat, sans-serif" font-size="10" fill="white" font-weight="bold">STMIK WICIDA</text>
     
-    <text x="30" y="460" font-family="Montserrat" font-size="10" fill="#0f172a" font-weight="bold">AHMAD REYNALDI | SMTR 5</text>
-    <text x="30" y="475" font-family="Montserrat" font-size="8" fill="#64748b">Muara Wahau > Samarinda</text>
+    <text x="50" y="460" font-family="Montserrat, sans-serif" font-size="16" fill="#0f172a" font-weight="bold">AHMAD REYNALDI</text>
+    <text x="50" y="480" font-family="Montserrat, sans-serif" font-size="12" fill="#64748b">Teknik Informatika | Semester 5</text>
   </g>
 
-  <g id="floating-icons">
-    <circle cx="165.31" cy="57.86" r="2.78" style="fill:#6366f1"></circle>
+  <path d="M400 100 L410 110 M410 100 L400 110" stroke="#6366f1" stroke-width="3"/>
+  <rect x="80" y="80" width="15" height="15" fill="#4f46e5" transform="rotate(45 87.5 87.5)"/>
+</svg>
