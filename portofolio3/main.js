@@ -1,3 +1,4 @@
+// 1. Smooth Scrolling & Active Link Highlight
 const navLinks = document.querySelectorAll('.ul-list li a');
 const sections = document.querySelectorAll('section');
 
@@ -11,19 +12,23 @@ navLinks.forEach(link => {
     const targetId = link.getAttribute('href').substring(1);
     const targetSection = document.getElementById(targetId);
 
-    window.scrollTo({
-      top: targetSection.offsetTop - 80, 
-      behavior: 'smooth'
-    });
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 80, 
+        behavior: 'smooth'
+      });
+    }
 
     removeActive();
     link.parentElement.classList.add('active');
   });
 });
 
+// 2. Scroll Events (Reveal & Back to Top)
 window.addEventListener('scroll', () => {
   let scrollPos = window.scrollY + 100;
 
+  // Update Active Link on Scroll
   sections.forEach(section => {
     if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
       removeActive();
@@ -32,12 +37,14 @@ window.addEventListener('scroll', () => {
     }
   });
 
+  // Back to Top Button Visibility
   if(window.scrollY > 500){
     backToTop.style.display = "flex";
   } else {
     backToTop.style.display = "none";
   }
 
+  // Scroll Reveal Logic
   revealElements.forEach(el => {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
@@ -49,9 +56,11 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// 3. Reveal Animation Setup
 const revealElements = document.querySelectorAll('.home-container, .about-container, .projects-container, .services-container, .contact-content');
 revealElements.forEach(el => el.classList.add('reveal'));
 
+// 4. Back To Top Button Creation
 const backToTop = document.createElement('div');
 backToTop.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
 backToTop.id = "back-to-top";
@@ -72,6 +81,7 @@ backToTop.style.cssText = `
   cursor: pointer;
   z-index: 1000;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 `;
 
 backToTop.addEventListener('click', () => {
@@ -81,14 +91,21 @@ backToTop.addEventListener('click', () => {
 backToTop.addEventListener('mouseover', () => backToTop.style.transform = 'scale(1.2)');
 backToTop.addEventListener('mouseout', () => backToTop.style.transform = 'scale(1)');
 
+// 5. Card Hover Effects
 const cards = document.querySelectorAll('.project-card, .c1, .service-card');
 cards.forEach(card => {
-  card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-8px) scale(1.05)');
+  card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-8px) scale(1.03)');
   card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0) scale(1)');
 });
 
+// 6. Typing Animation (Updated for Ahmad Reynaldi)
 const typingElement = document.querySelector('.info-home h3'); 
-const words = ["Frontend Developer", "UI/UX Designer", "Web Enthusiast", "React Developer"];
+const words = [
+  "Fullstack Developer", 
+  "Laravel Enthusiast", 
+  "UI/UX Designer (Figma)", 
+  "IT Student at WICIDA"
+];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -107,29 +124,36 @@ function type() {
         charIndex--;
         setTimeout(type, typingSpeed / 2);
     } else {
-        isDeleting = !isDeleting;
         if (!isDeleting) {
+            // Pause at end of word
+            setTimeout(() => { isDeleting = true; type(); }, 2000);
+        } else {
+            isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(type, 500);
         }
-        setTimeout(type, 1000);
     }
 }
 
-document.addEventListener('DOMContentLoaded', type);
+// 7. Initializations & Loading Screen
+document.addEventListener('DOMContentLoaded', () => {
+  // Start Typing
+  type();
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Loading Screen Animation
   const loadingText = document.getElementById("loading-text");
   const mainIcon = document.querySelector(".main-icon");
   const subIcons = document.querySelectorAll(".sub-icons i");
   const designerText = document.getElementById("designer-text");
-  const mainPage = document.getElementById("main-page");
   const loadingScreen = document.getElementById("loading-screen");
 
   function showElement(element, delay=0){
-    setTimeout(() => {
-      element.classList.remove("hidden");
-      element.classList.add("fall");
-    }, delay);
+    if (element) {
+      setTimeout(() => {
+        element.classList.remove("hidden");
+        element.classList.add("fall");
+      }, delay);
+    }
   }
 
   showElement(loadingText, 0);          
@@ -139,9 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   showElement(designerText, 2800);    
 
+  // Hide Loading Screen
   setTimeout(() => {
     loadingScreen.style.opacity = '0';
-    setTimeout(() => loadingScreen.style.display='none', 500);
-    mainPage.classList.add("visible");
-  }, 4000);
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 500);
+  }, 4500);
 });
