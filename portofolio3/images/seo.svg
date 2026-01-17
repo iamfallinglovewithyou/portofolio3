@@ -1,28 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <g id="reynaldi-bg">
-    <path d="M467.06,462.43c0,.14-97.19.26-217.07.26s-217.07-.12-217.07-.26,97.17-.26,217.07-.26S467.06,462.28,467.06,462.43Z" style="fill:#0f172a"></path>
-    <rect x="51.85" y="123.72" width="70.88" height="70.88" rx="5.4" transform="translate(-82.86 222.42) rotate(-81.65)" style="fill:#f8fafc"></path>
+  <rect width="500" height="500" fill="#f8fafc"/>
+  <circle cx="450" cy="50" r="80" fill="#6366f1" opacity="0.1"/>
+  <circle cx="50" cy="450" r="60" fill="#4f46e5" opacity="0.1"/>
+
+  <rect x="50" y="400" width="400" height="15" rx="5" fill="#0f172a"/>
+  
+  <g id="character">
+    <path d="M160 400 Q160 310 250 310 T340 400" fill="#0f172a"/>
+    <circle cx="250" cy="260" r="45" fill="#ffbe9d"/>
+    <path d="M205 260 Q205 210 250 210 T295 260" fill="#263238"/>
+    <rect x="210" y="350" width="80" height="50" rx="4" fill="#6366f1"/>
+    <rect x="220" y="360" width="60" height="30" fill="#ffffff" opacity="0.3"/>
   </g>
 
-  <g id="reynaldi-character">
-    <path d="M152.27,225.81l-9.42,1.26a22.88,22.88,0,0,0-9.37,5.89l-26.07,27.16-6.61-40.26-13.51,1.73,4.06,48a15.27,15.27,0,0,0,14.55,14.15c.36,0,1.08,0,1.08,0a16,16,0,0,0,10.66-4.93l17.09-14.9" style="fill:#6366f1"></path>
-    <path d="M149,225.37c-12.06,1.35-16,10.36-21.6,18.42l-8.13,15,15.5,5.14L133.66,291l-7.12,22,55.56-3.28-4.5-20.85,3.16-23.8,3-19.85a14.77,14.77,0,0,0-8.95-16c-7.48-2.92-7.68-3.47-13.63-3.73-1.89-.08-10.65-.45-12.18-.07" style="fill:#0f172a"></path>
-    <path d="M140.6,181.71a6.74,6.74,0,0,1,3.89-12.26c3.15,0,5.86,2.17,8.91,2.93,2.4.6,4.91.32,7.38.38s5.11.57,6.81,2.36c2.12,2.23,2.19,5.8,4.15,8.18,1.39,1.7,3.55,2.54,5.31,3.86a11.67,11.67,0,0,1,1.16,17.67c-1.17,1.15,2.63,2.11-3.32,3.6-1,2.27,0,5.28-1.64,7.21s-5,1.76-6.16,3.93c-.48.87-.6,2.09-1.52,2.48a2.56,2.56,0,0,1-2.19-.51l-9.17-5.43" style="fill:#263238"></path>
+  <g id="monitor-laravel">
+    <rect x="330" y="160" width="130" height="90" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+    <text x="355" y="210" font-family="Arial, sans-serif" font-size="14" fill="#6366f1" font-weight="bold">LARAVEL</text>
   </g>
 
-  <g id="reynaldi-device">
-    <path d="M346.64,462.83l-131.53-.08a28.66,28.66,0,0,1-28.64-28.66l.07-329.75A28.65,28.65,0,0,1,215.2,75.69l131.54.08a28.65,28.65,0,0,1,28.63,28.66l-.06,329.75A28.66,28.66,0,0,1,346.64,462.83Z" style="fill:#0f172a"></path>
-    <path d="M346.6,87.43H321.1a6.34,6.34,0,0,0-6.2,6.47v4.62a6.33,6.33,0,0,1-6.19,6.47L259,105a6.34,6.34,0,0,1-6.19-6.47V93.85a6.34,6.34,0,0,0-6.19-6.48h-9l-22.32,0a20.07,20.07,0,0,0-20.08,20.07l-.06,321.86a20.06,20.06,0,0,0,20.05,20.07l131.27.08a20.08,20.08,0,0,0,20.08-20.06l.06-321.87A20.06,20.06,0,0,0,346.6,87.43Z" style="fill:#ffffff"></path>
-    
-    <text x="215" y="130" font-family="Montserrat, Arial" font-size="14" fill="#6366f1" font-weight="bold">REYNALDI</text>
-    <text x="215" y="170" font-family="Montserrat, Arial" font-size="9" fill="#0f172a" font-weight="bold">LARAVEL DEVELOPER</text>
-    <text x="215" y="185" font-family="Montserrat, Arial" font-size="7" fill="#64748b">STMIK WIDYA CIPTA DHARMA</text>
-    
-    <rect x="215" y="200" width="130" height="40" rx="5" fill="#f1f5f9" />
-    <text x="225" y="225" font-family="Arial" font-size="8" fill="#6366f1">Project: E-Commerce</text>
-    <rect x="215" y="250" width="130" height="40" rx="5" fill="#f1f5f9" />
-    <text x="225" y="275" font-family="Arial" font-size="8" fill="#6366f1">Design: UI/UX Figma</text>
+  <g id="monitor-figma">
+    <rect x="40" y="190" width="100" height="70" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="75" cy="225" r="12" fill="#6366f1" opacity="0.8"/>
+    <text x="90" y="230" font-family="Arial, sans-serif" font-size="10" fill="#0f172a" font-weight="bold">FIGMA</text>
   </g>
 
-  <g id="floating-apps">
-    <rect x="359.79" y="169.93" width="60" height="60" rx="10" transform="rotate(-19)" style="fill:#6366
+  <text x="50" y="450" font-family="Arial, sans-serif" font-size="18" fill="#0f172a" font-weight="bold">AHMAD REYNALDI</text>
+  <text x="50" y="475" font-family="Arial, sans-serif" font-size="12" fill="#64748b">STMIK WICIDA | Semester 5</text>
+</svg>
