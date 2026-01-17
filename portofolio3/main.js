@@ -98,13 +98,13 @@ cards.forEach(card => {
   card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0) scale(1)');
 });
 
-// 6. Typing Animation (Updated for Ahmad Reynaldi)
+// 6. Typing Animation (Pembaruan Profil Ahmad Reynaldi)
 const typingElement = document.querySelector('.info-home h3'); 
 const words = [
-  "Fullstack Developer", 
-  "Laravel Enthusiast", 
-  "UI/UX Designer (Figma)", 
-  "IT Student at WICIDA"
+  "Pengembang Web Laravel", 
+  "Desainer UI/UX Figma", 
+  "Mahasiswa Teknik Informatika", 
+  "Pegiat Teknologi Web"
 ];
 let wordIndex = 0;
 let charIndex = 0;
@@ -125,7 +125,7 @@ function type() {
         setTimeout(type, typingSpeed / 2);
     } else {
         if (!isDeleting) {
-            // Pause at end of word
+            // Berhenti sejenak di akhir kata
             setTimeout(() => { isDeleting = true; type(); }, 2000);
         } else {
             isDeleting = false;
@@ -137,37 +137,14 @@ function type() {
 
 // 7. Initializations & Loading Screen
 document.addEventListener('DOMContentLoaded', () => {
-  // Start Typing
+  // Mulai Animasi Mengetik
   type();
 
-  // Loading Screen Animation
+  // Animasi Layar Pemuatan (Loading Screen)
   const loadingText = document.getElementById("loading-text");
   const mainIcon = document.querySelector(".main-icon");
   const subIcons = document.querySelectorAll(".sub-icons i");
   const designerText = document.getElementById("designer-text");
   const loadingScreen = document.getElementById("loading-screen");
 
-  function showElement(element, delay=0){
-    if (element) {
-      setTimeout(() => {
-        element.classList.remove("hidden");
-        element.classList.add("fall");
-      }, delay);
-    }
-  }
-
-  showElement(loadingText, 0);          
-  showElement(mainIcon, 800);         
-  subIcons.forEach((icon, idx) => {
-    showElement(icon, 1600 + idx*400);  
-  });
-  showElement(designerText, 2800);    
-
-  // Hide Loading Screen
-  setTimeout(() => {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-    }, 500);
-  }, 4500);
-});
+  function showElement
